@@ -4,6 +4,8 @@ import "flatpickr/dist/flatpickr.min.css";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
+import icon from "../img/close.svg";
+
 const btn = document.querySelector('[data-start]');
 btn.setAttribute('disabled', '');
 
@@ -20,7 +22,7 @@ const options = {
     onClose(selectedDates) {
         if (selectedDates[0].getTime() <= Date.now()) {
             iziToast.error({
-                iconUrl: '/img/close.svg',
+                iconUrl: icon,
                 iconColor: '#fff',
                 message: 'Please choose a date in the future',
                 messageColor: '#fff',
